@@ -21,19 +21,13 @@ for item in file_log.action:
         act.count = 1
 
 for i in user_id:
-    if i.count > (i-1).count:
+    if i.count > max:
         max = i.count
         top_user = i.id
-    else:
-        max = (i-1).count
-        top_user = (i-1).id
 print("Most Active User: %s" &top_user)
 
 for j in act:
-    if j.count > (j-1).count:
+    if j.count > max:
         max = j.count
         top_action = j.action
-    else:
-        max = (j-1).count
-        top_action = (j-1).action
 print("Most Common Action: %s" &top_action)
